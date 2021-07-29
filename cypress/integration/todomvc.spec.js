@@ -12,5 +12,7 @@ it('should navigate to the TodoMVC App', () => {
 
     cy.get('.toggle').click()
 
-    cy.contains('Clear completed').click()
+    //cy.contains('Clear completed').click()
+
+    cy.contains('Clear').click() //contains can work with partial string and it will find it anyway
 })
