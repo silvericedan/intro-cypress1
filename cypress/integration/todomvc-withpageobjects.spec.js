@@ -33,7 +33,6 @@ describe('todo actions', () => {
         todoPage.clearCompleted()
         
         todoPage.validateListHaveElements(false)
-        //cy.get('.todo-list').should('not.have.descendants', 'li') //checking to see if the list have elements after clearing it
-
+        
     })
 })

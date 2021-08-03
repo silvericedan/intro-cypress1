@@ -32,4 +32,22 @@ export class TodoPage {
     validateListHaveElements(shouldHaveElements){
         cy.get('.todo-list').should(`${shouldHaveElements? '' : 'not.'}have.descendants`, 'li')
     }
+
+    validateNumberOfTodosShown(expectedNumberOfTodos){
+        cy.get('.todo-list li').should('have.length', expectedNumberOfTodos)
+    }
+
+    //this ones are used by todomvc-filtering
+
+    showOnlyActivesTodos(){
+        cy.contains('Active').click()
+    }
+
+    showOnlyCompletedTodos(){
+        cy.contains('Completed').click()
+    }
+
+    showAllTodos(){
+        cy.contains('All').click()
+    }
 }
