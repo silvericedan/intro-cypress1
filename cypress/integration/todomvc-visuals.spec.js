@@ -2,7 +2,8 @@
 import * as todoPage from '../page-objects/todo-page-functions'
 
 describe('visual validation', () => {
-    before(() => todoPage.navigate())
+    //before(() => todoPage.navigate())
+    before(() => cy.visit('http://todomvc-app-for-testing.surge.sh/?different-title-color'))
 
     beforeEach(() => cy.eyesOpen({appName: 'TAU TodoMVC', batchName: 'TAU TodoMVC Hey!'}))
     afterEach(() => cy.eyesClose())
